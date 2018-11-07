@@ -39,9 +39,9 @@ def test_create_money():
     assert one_dollar.currency == USD
 
 
-def test_dollars_to_str():
-    one_dollar = Money(1, USD)
-    assert str(one_dollar) == "$1.00"
+# def test_dollars_to_str():
+#     one_dollar = Money(1, USD)
+#     assert str(one_dollar) == "$1.00"
 
 
 # def test_dinar_to_str():
@@ -79,11 +79,11 @@ def test_sub_money():
 #         Money(1, USD).sub(Money(1, BHD))
 
 
-# def test_mul_money():
-#     assert Money(2.75, USD).mul(3) == Money(8.25, USD)
-#     assert Money(3.81, USD).mul(4) == Money(15.24, USD)
+def test_mul_money():
+    assert Money(2.75, USD).mul(3) == Money(8.25, USD)
+    assert Money(3.81, USD).mul(4) == Money(15.24, USD)
 
 
-# def test_div_money():
-#     assert Money(3, USD).div(3) == Money(1, USD)
-#     assert Money(12, USD).div(4) == Money(3, USD)
+def test_div_money():
+    assert Money(3, USD).div(3) == Money(1, USD)
+    assert Money(12, USD).div(4) == Money(3, USD)
