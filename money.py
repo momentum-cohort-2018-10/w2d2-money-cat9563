@@ -61,10 +61,10 @@ class Money:
         Use the currency digits to determine number of digits to show.
         """
 
-        if self.currency.digits == self.currency.code:
-            return f"{self.currency.symbol}{self.amount:.2f}"
-        else:
-            return f"{self.currency.symbol}{self.amount:.3f}"
+        # if self.currency.digits == self.currency.code:
+        #     return f"{self.currency.symbol}{self.amount:.2f}"
+        # else:
+        #     return f"{self.currency.symbol}{self.amount:.3f}"
 
     def __repr__(self):
         return f"<Money {str(self)}>"
