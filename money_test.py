@@ -54,9 +54,9 @@ def test_money_equality():
     assert Money(2, USD) == Money(2, USD)
 
 
-# def test_money_inequality():
-#     assert Money(1, USD) != Money(2, USD)
-#     assert Money(2, USD) != Money(2, BHD)
+def test_money_inequality():
+    assert Money(1, USD) != Money(2, USD)
+    assert Money(2, USD) != Money(2, BHD)
 
 
 def test_add_money():
@@ -69,14 +69,14 @@ def test_sub_money():
     assert Money(10, USD).sub(Money(3.75, USD)) == Money(6.25, USD)
 
 
-# def test_add_different_currencies():
-#     with pytest.raises(DifferentCurrencyError):
-#         Money(1, USD).add(Money(1, BHD))
+def test_add_different_currencies():
+    with pytest.raises(DifferentCurrencyError):
+        Money(1, USD).add(Money(1, BHD))
 
 
-# def test_sub_different_currencies():
-#     with pytest.raises(DifferentCurrencyError):
-#         Money(1, USD).sub(Money(1, BHD))
+def test_sub_different_currencies():
+    with pytest.raises(DifferentCurrencyError):
+        Money(1, USD).sub(Money(1, BHD))
 
 
 def test_mul_money():
